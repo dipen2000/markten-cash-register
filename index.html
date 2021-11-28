@@ -9,36 +9,44 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>Cash register app</h1>
-    <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
-    <label for="bill-amount-input">Bill amount : </label>
-    <input type="number" id="bill-amount-input" placeholder="Please enter the bill amount"/>
-    <label for="cash-amount-input">Cash given : </label>
-    <input type="number" id="cash-amount-input" placeholder="Please enter the cash given"/>
-    <button id="check-btn">Check</button>
-    <p class="message"></p>
-    <table>
-        <caption>Return change</caption>
-        <tr>
-            <th>No. of Notes</th>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <th>Note</th>
-            <td>2000</td>
-            <td>500</td>
-            <td>100</td>
-            <td>20</td>
-            <td>10</td>
-            <td>5</td>
-            <td>1</td>
-        </tr>
-    </table>
+    <h1 class="heading">Cash register app</h1>
+    <div class="container">
+        <p class="desc">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+        <label for="bill-amount-input" class="bill-amount-input">Bill amount : </label>
+        <input type="number" id="bill-amount-input" placeholder="Please enter the bill amount" min="1"/>
+        <button id="nextBtn">Next</button>
+        <p class="next-message"></p>
+        <div class="secondary-container">
+        <label for="cash-amount-input">Cash given : </label>
+        <input type="number" id="cash-amount-input" placeholder="Please enter the cash given" min="1"/>
+        <button id="check-btn">Check</button>
+        <p class="message"></p>
+        <table>
+            <caption>Return change</caption>
+            <tr>
+                <th>No. of Notes</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
+        </div>
+    
+    </div>
+    
 </body>
 </html>

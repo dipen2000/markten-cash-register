@@ -1,9 +1,14 @@
 const billAmountInput = document.querySelector("#bill-amount-input");
 const cashGivenInput = document.querySelector("#cash-amount-input");
 const checkBtn = document.querySelector("#check-btn");
+const nextBtn = document.querySelector("#nextBtn");
 const message = document.querySelector(".message");
+const nextMessage = document.querySelector(".next-message");
+const secondaryContainer = document.querySelector(".secondary-container");
 const tableDataArr = document.querySelectorAll("td");
 checkBtn.addEventListener("click",checkClickHandler);
+nextBtn.addEventListener("click",nextClickHandler);
+
 
 let notesArr = ["2000","500","100","20","10","5","1"];
 function checkClickHandler(){
@@ -34,3 +39,14 @@ function calculateChange(amountToReturn){
     }
 }
 
+function nextClickHandler(){
+    let billInput = Number(billAmountInput.value);
+    if(billInput >= 1){
+        nextMessage.style.display = "none";
+        secondaryContainer.style.display = "flex";
+        nextBtn.style.display = "none";   
+    }
+    else{
+        nextMessage.innerText = "Please input a valid input.";
+    }
+}
